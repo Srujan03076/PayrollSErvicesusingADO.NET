@@ -6,7 +6,7 @@ namespace PayrollServicesUsingADO.NET
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Payroll Services ADO!");
+            Console.WriteLine("Welcome to Payroll Services ADO.NET!");
         }
     }
 }
