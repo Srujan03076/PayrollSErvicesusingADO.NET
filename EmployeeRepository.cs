@@ -74,8 +74,8 @@ namespace PayrollServicesUsingADO.NET
             try
             {
                 EmployeeModel employeeModel = new EmployeeModel();
-                sqlconnection.Open();
-                string query = @"update employee_payroll set Base_pay=3000000 where name='Srujan'";
+                this.sqlconnection.Open();
+                string query = @"UPDATE employee_payroll SET BasicPay=3000000 WHERE EmployeeName='Srujan'";
                 SqlCommand command = new SqlCommand(query, sqlconnection);
 
                 int result = command.ExecuteNonQuery();
@@ -94,7 +94,7 @@ namespace PayrollServicesUsingADO.NET
             }
             finally
             {
-                sqlconnection.Close();
+                this.sqlconnection.Close();
 
             }
         }
