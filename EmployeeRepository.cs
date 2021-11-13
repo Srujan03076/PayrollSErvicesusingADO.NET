@@ -68,7 +68,41 @@ namespace PayrollServicesUsingADO.NET
                 this.sqlconnection.Close();
             }
         }
-    }
 
+        public void UpdateSalary()
+        {
+            try
+            {
+                EmployeeModel employeeModel = new EmployeeModel();
+                sqlconnection.Open();
+                string query = @"update employee_payroll set Base_pay=3000000 where name='Srujan'";
+                SqlCommand command = new SqlCommand(query, sqlconnection);
+
+                int result = command.ExecuteNonQuery();
+                if (result != 0)
+                {
+                    Console.WriteLine("Salary Updated ");
+                }
+                else
+                {
+                    Console.WriteLine("Not Updated");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                sqlconnection.Close();
+
+            }
+        }
+    }
 }
+
+
+       
+
+       
   
